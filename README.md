@@ -1,4 +1,8 @@
-# README: Arguments Explanation
+# README
+
+Experiments conducted with this code for our work can be followed through the  [WANDB Link](https://api.wandb.ai/links/caglarmert/rdvjvsyu)
+
+## Arguments Explanation
 
 This document provides an explanation of the various command-line arguments used in the program along with their default values and possible options.
 
