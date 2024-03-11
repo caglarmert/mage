@@ -1,6 +1,7 @@
 # README
 
-Experiments conducted with this code for our work can be followed through the  [WANDB Link](https://api.wandb.ai/links/caglarmert/rdvjvsyu)
+Experiments conducted with this code for our work can be followed through the [WANDB Link](https://api.wandb.ai/links/caglarmert/rdvjvsyu).
+We have used the publicly available dataset, STEAD, STanford EArthquake Dataset (STEAD):A Global Data Set of Seismic Signals for AI. To reach the dataset follow this [link](https://github.com/smousavi05/STEAD).
 
 ## Arguments Explanation
 
