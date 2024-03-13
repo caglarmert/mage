@@ -104,6 +104,16 @@ You can use the experiment.py (the main of this code) and select the following a
 src/experiment.py --radius 300 --n_epochs 200 --SP --FC_size 256 --lr 0.001 --network TCN
 ```
 
+The code above will create a .pkl file that will be named: "hat_STEAD_lt_36_ln_-119_rd_300_dr_60_ed_120_sp_1fr0_c_C.pkl". This file is basically the attributes pickle that speeds up the subsequent runs.
+
+## Test
+
+The following code can be run to test the pipeline. Basically, the code will be run for the stations within 300 KM radius (just as we did before) but the training will last much shorter as we will provide number of epochs 2 and a much smaller model dimension (64). TCN network trains faster than ResNet. Evaluation and the results will be saved just like a normal run.
+
+```bash
+src/experiment.py --radius 300 --n_epochs 2 --FC_size 64 --lr 0.001 --network TCN
+```
+
 
 ## Contact Information
 Ümit Mert Çağlar
