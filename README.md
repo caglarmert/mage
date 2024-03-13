@@ -1,4 +1,40 @@
-# README
+# MAGE
+The computer code used for the experiments conducted in this work is named as MAGE after Middle East Technical University (METU), Graduate School of Informatics Applied Intelligence Research Laboratory (AIRLab), Geoinformatics and Artificial Intelligence Applications Group (GAIA), Epicenter distance estimation with deep learning.
+
+![Overall Architecture](figs/models.png)
+
+
+## Introduction
+MAGE is a software to develop deep learning based epicenter distance estimation models. Training and evaluating different models within the MAGE framework is possible.
+
+
+## Setup
+Download or pull/fork from the Git repository and setup the required libraries as stated in the requirements.txt file. The code to install all requirements is as follows: 
+
+
+```bash
+pip -install -r requirements.txt
+```
+After installing all requirements, the code should be able to run with no errors as detailed in the usage section.
+
+
+## Usage
+
+The usage requires some adjusts for the code so that the data, working directory and the output directory is clearly indicated in the code. To be able to do this, change the variables according to the directories of datasets, AFAD, STEAD or KANDILLI. Note that the experiments and evaluation are done with STEAD path thus it is not recommended to use KANDILLI and AFAD datasets, which requires different process than our baseline STEAD dataset. Selecting STEAD as described in the arguments section, will disable all other datasets and their corresponding affects.
+
+```python
+if args.pc:
+    working_directory = "WORKDIR"
+    AFAD_Path = "AFADDIR"
+    STEAD_Path = "STEADDIR"
+    KANDILLI_Path = "KANDILLIDIR"
+else:
+    working_directory = "WORKDIR"
+    AFAD_Path = "AFADDIR"
+    STEAD_Path = "STEADDIR"
+    KANDILLI_Path = "KANDILLIDIR"
+```
+
 
 Experiments conducted with this code for our work can be followed through the [WANDB Link](https://api.wandb.ai/links/caglarmert/rdvjvsyu).
 We have used the publicly available dataset, STEAD, STanford EArthquake Dataset (STEAD):A Global Data Set of Seismic Signals for AI. To reach the dataset follow this [link](https://github.com/smousavi05/STEAD).
@@ -59,3 +95,21 @@ This document provides an explanation of the various command-line arguments used
 - Adjust numeric values as needed based on the specifics of your dataset and model architecture.
 
 Please refer to the documentation or source code for further details on each argument's usage and functionality.
+
+## Example Usage
+
+You can use the experiment.py (the main of this code) and select the following arguments (or their defaults will be used). The following code starts an experiment with number of epochs as 200, with P-S phase information, fully connected layer size as 256, learning rate as 0.001, network architecture as TCN and only considers stations within a radius of 300 KM of the default location `--lat`: Latitude. Default: `36.77` `--lon`: Longitude. Default: `-119.41`.
+
+```bash
+src/experiment.py --radius 300 --n_epochs 200 --SP --FC_size 256 --lr 0.001 --network TCN
+```
+
+
+## Contact Information
+Ümit Mert Çağlar
+
+Middle East Technical University
+
+Graduate School of Informatics
+
+mert <dot> caglar <at> metu.edu.tr
