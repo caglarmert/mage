@@ -22,6 +22,8 @@ After installing all requirements, the code should be able to run with no errors
 
 The usage requires some adjusts for the code so that the data, working directory and the output directory is clearly indicated in the code. To be able to do this, change the variables according to the directories of datasets, AFAD, STEAD or KANDILLI. Note that the experiments and evaluation are done with STEAD path thus it is not recommended to use KANDILLI and AFAD datasets, which requires different process than our baseline STEAD dataset. Selecting STEAD as described in the arguments section, will disable all other datasets and their corresponding affects.
 
+The user can extract the accompanied test set (a very small portion of STEAD) into a folder and point the following directories to that folder to test the pipeline end-to-end. The first run will generate an attributes file that will be used in subsequent runs. If the user wants to test the whole STEAD set, then the created attributes file has to be deleted before running the code again with the same arguments.
+
 ```python
 if args.pc:
     working_directory = "WORKDIR"
