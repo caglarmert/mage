@@ -124,4 +124,4 @@ Middle East Technical University
 
 Graduate School of Informatics
 
-mert <dot> caglar <at> metu.edu.tr
+mert[dot]caglar[at]metu.edu.tr
